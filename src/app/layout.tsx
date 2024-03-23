@@ -1,4 +1,6 @@
 import { Inter as FontSans } from "next/font/google";
+import localFont from "next/font/local";
+
 import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +14,10 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+const fontHeading = localFont({
+  src: "../assets/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-heading",
+});
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -29,6 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
+          fontHeading.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
