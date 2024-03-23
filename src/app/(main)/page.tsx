@@ -15,7 +15,10 @@ export default async function IndexPage() {
             Fat To Slim believes the meaning of DIET Is eating meals that are
           </p>
           <div className="space-x-4">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link
+              href="/register"
+              className={cn(buttonVariants({ size: "lg" }))}
+            >
               Get Started
             </Link>
           </div>
