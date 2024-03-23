@@ -3,6 +3,7 @@ import Link from "next/link";
 // import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
 // import { MainNav } from "@/components/main-nav"
 // import { SiteFooter } from "@/components/site-footer";
 
@@ -22,6 +23,7 @@ export default async function MarketingLayout({
           </Link>
           {/* <MainNav items={marketingConfig.mainNav} /> */}
           <nav>
+            <ModeToggle />
             <Link
               href="/login"
               className={cn(

@@ -19,7 +19,7 @@ export function UserAuthButton() {
         className={cn(buttonVariants({ variant: "outline" }))}
         onClick={async () => {
           setIsGoogleLoading(true);
-          await signIn("google");
+          await signIn("google", { callbackUrl: "/dashboard" });
         }}
         disabled={isGoogleLoading}
       >

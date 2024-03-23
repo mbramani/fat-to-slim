@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { UserAuthButton } from "@/components/user-auth-button";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
+      <ModeToggle />
+
       <Link
         href="/"
         className={cn(
